@@ -1,0 +1,44 @@
+<div class="h-screen flex flex-col">
+	<header class="bg-gradient-to-r from-sky-800 via-sky-700 to-sky-800 text-white p-6 shadow-lg">
+		<nav>
+			<ul class="flex justify-center space-x-6 text-white font-semibold">
+				<li>
+					<a class="hover:opacity-70 hover:cursor-pointer" 
+						routerLink="/template/galeria" 
+						routerLinkActive="opacity-70">
+						Galeria
+					</a>
+				</li>
+				<li>
+					<a class="hover:opacity-70 hover:cursor-pointer" 
+						routerLink="/template/categorias"
+						routerLinkActive="opacity-70">
+						Categorias
+					</a>
+				</li>
+				<li>
+					<a class="hover:opacity-70 hover:cursor-pointer" 
+						routerLink="/template/locais"
+						routerLinkActive="opacity-70">
+						Locais
+					</a>
+				</li>
+				<li>
+					<a class="hover:opacity-70 hover:cursor-pointer" 
+						(click)="logout()"
+						routerLinkActive="opacity-70">
+						Sair
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="bg-sky-500 bg-opacity-5 pt-2 pr-8 pb-4 pl-8 flex-1">
+		<router-outlet></router-outlet>
+	</div>
+
+	<footer class="bg-gradient-to-r from-sky-800 via-sky-700 to-sky-800 object-bottom p-4 text-center">
+		<p class="text-sm text-white">Todos os direitos reservados (2025)</p>
+	</footer>
+</div>

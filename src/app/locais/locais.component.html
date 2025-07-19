@@ -1,0 +1,129 @@
+<div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6 mb-4">
+	<h2 class="text-2x1 font-semibold text-gray-700 mb-4">
+		Novo local
+	</h2>
+
+	<form 
+		id="placeForm"
+		[formGroup]="placeForm"
+		(ngSubmit)="save()">
+		<div class="mb-4">
+			<label 
+				class="block text-gray-600 font-medium mb-1"
+				for="name">
+				Nome
+			</label>
+			<input
+				class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-sky-400 mb-1"
+				formControlName="name"
+				id="name" 
+				name="name" 
+				placeholder="Praia do Sol, Restaurante Estrela..." 
+				type="text"/>
+
+			@if (isInvalidField('name')) {
+				<span class="text-red-500 text-sm">
+					O nome do local deve ser informado!
+				</span>
+			}
+		</div>
+		
+		<div class="relative mb-4">
+			<label 
+				class="block text-gray-600 font-medium mb-1"
+				for="category">
+				Categoria
+			</label>
+			<select
+				class="w-full p-3 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-sky-400 mb-1 appearance-none"
+				formControlName="category"
+				id="category" 
+				name="category">
+				<option value="">Selecione...</option>
+
+				@for (categoria of categorias; track $index) {
+					<option [value]="categoria.name">{{ categoria.name }}</option>
+				}
+			</select>
+
+			@if (isInvalidField('category')) {
+				<span class="text-red-500 text-sm">
+					A categoria do local deve ser informada!
+				</span>
+			}
+		</div>
+
+		<div class="mb-4">
+			<label 
+				class="block text-gray-600 font-medium mb-1"
+				for="location">
+				Localização
+			</label>
+			<input
+				class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-sky-400 mb-1"
+				formControlName="location"
+				id="location" 
+				name="location" 
+				placeholder="São Paulo, Rio de Janeiro, Vitória..." 
+				type="text"/>
+
+			@if (isInvalidField('location')) {
+				<span class="text-red-500 text-sm">
+					A localização do local deve ser informada!
+				</span>
+			}
+		</div>
+
+		<div class="mb-4">
+			<label 
+				class="block text-gray-600 font-medium mb-1"
+				for="photoUrl">
+				URL da Foto
+			</label>
+			<input
+				class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-sky-400 mb-1"
+				formControlName="photoUrl"
+				id="photoUrl" 
+				name="photoUrl" 
+				placeholder="https://picsum.photos/640/480" 
+				type="text"/>
+
+			@if (isInvalidField('photoUrl')) {
+				<span class="text-red-500 text-sm">
+					A URL da foto do local deve ser informada!
+				</span>
+			}
+		</div>
+
+		<div class="mb-4">
+			<label 
+				class="block text-gray-600 font-medium mb-1"
+				for="rating">
+				Avaliação
+			</label>
+			<select
+				class="w-full p-3 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-sky-400 mb-1 appearance-none"
+				formControlName="rating"
+				id="rating" 
+				name="rating">
+				<option value="">Selecione...</option>
+
+				@for (rating of ratings; track $index) {
+					<option [value]="rating.rating">{{ rating.description }}</option>
+				}
+			</select>
+
+			@if (isInvalidField('rating')) {
+				<span class="text-red-500 text-sm">
+					A avaliação do local deve ser informada!
+				</span>
+			}
+		</div>
+
+		<button 
+			class="w-full bg-gradient-to-r from-sky-800 via-sky-700 to-sky-800 text-white font-semibold p-3 rounded shadow hover:opacity-90"
+			type="submit">
+			{{ placeForm.get('id')?.value ? 'Atualizar local' : 'Cadastrar local' }}
+		</button>
+	</form>
+</div>

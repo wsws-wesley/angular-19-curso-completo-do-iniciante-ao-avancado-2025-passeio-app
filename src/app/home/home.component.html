@@ -1,0 +1,26 @@
+<div class="bg-gradient-to-r from-sky-800 via-sky-700 via-sky-600 via-sky-700 to-sky-800 text-white shadow-lg min-h-screen flex flex-col justify-center items-center">
+	<div class="text-center px-6">
+		<h1 class="text-4xl font-bold mb-4 italic">PASSEIO APP</h1>
+		<p class="text-lg mb-6">DESCUBRA SUA PRÓXIMA VIAGEM</p>
+	</div>
+
+	@if (isLoggedIn()) {
+		<button class="bg-white font-semibold text-sky-800 py-3 px-8 rounded-full hover:opacity-90 flex space-x-3 items-center"
+			(click)="navigateToGalery()">
+			<img alt="Google.png"
+				class="mr-2"
+				src="https://cdn3.iconfinder.com/data/icons/basic-1-blue-series/64/a-31-256.png" 
+				width="24px">
+			Olá {{ profile.name.trim().split(' ')[0] }}, deseja ver a galeria? 
+		</button>
+	} @else {
+		<button class="bg-white font-semibold text-sky-800 py-3 px-8 rounded-full hover:opacity-90 flex space-x-3 items-center"
+			(click)="login()">
+			<img alt="Google.png"
+			class="mr-2"
+			src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" 
+			width="24px">
+			Logar com Google
+		</button>
+	}
+</div>

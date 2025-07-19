@@ -1,0 +1,113 @@
+{
+  "categorias": [
+    {
+      "name": "Praia",
+      "description": "Praia",
+      "id": 1
+    },
+    {
+      "name": "Restaurantes",
+      "description": "Restaurantes",
+      "id": 2
+    },
+    {
+      "name": "Pizzarias",
+      "description": "Pizzarias",
+      "id": 3
+    },
+    {
+      "name": "Parques",
+      "description": "Parques",
+      "id": 4
+    },
+    {
+      "name": "Shoppings",
+      "description": "Shoppings",
+      "id": 5
+    },
+    {
+      "name": "Museus",
+      "description": "Museus",
+      "id": 6
+    },
+    {
+      "name": "Pontos Turísticos",
+      "description": "Pontos Turísticos",
+      "id": 7
+    }
+  ],
+  "locais": [
+    {
+      "id": 1,
+      "name": "Coliseu de Roma",
+      "category": "Pontos Turísticos",
+      "location": "Roma",
+      "photoUrl": "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic_2744183_bx.webp?w=1600&h=900",
+      "rating": "5"
+    },
+    {
+      "id": 2,
+      "name": "Buteco Fassina",
+      "category": "Restaurantes",
+      "location": "Americana",
+      "photoUrl": "https://d2kihw5e8drjh5.cloudfront.net/eyJidWNrZXQiOiJ1dGEtaW1hZ2VzIiwia2V5IjoicGxhY2VfaW1nLzBmNjE2cVRyUmxXRW5yM0tkRERiT1EiLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjY0MCwiaGVpZ2h0Ijo2NDAsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsInRvRm9ybWF0IjogIndlYnAifX0=",
+      "rating": "5"
+    },
+    {
+      "id": 3,
+      "name": "NoHashi",
+      "category": "Restaurantes",
+      "location": "Americana",
+      "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIQQA1v-oQqgOKXDIis7hNqkVLRUY9ytVeAw&s",
+      "rating": "5"
+    },
+    {
+      "id": 4,
+      "name": "Praia do Gonzaga",
+      "category": "Praia",
+      "location": "Santos",
+      "photoUrl": "https://i1.sndcdn.com/artworks-fJlGLaPXl2mqAYPu-TtoEDA-t500x500.jpg",
+      "rating": "4"
+    },
+    {
+      "id": 5,
+      "name": "Taishi Americana",
+      "category": "Restaurantes",
+      "location": "Americana",
+      "photoUrl": "https://www.taishi.com.br/wp-content/uploads/2017/04/americana-2.jpg",
+      "rating": "1"
+    },
+    {
+      "id": 6,
+      "name": "Praia da Escadaria",
+      "category": "Praia",
+      "location": "Arraial do Cabo",
+      "photoUrl": "https://ogimg.infoglobo.com.br/in/11533323-796-aad/FT631A/ESCADA-DAS-PRAINHAS.jpg",
+      "rating": "5"
+    },
+    {
+      "id": 7,
+      "name": "Churrascaria Fogo Nobre",
+      "category": "Restaurantes",
+      "location": "Americana",
+      "photoUrl": "https://img.restaurantguru.com/r7bd-Churrascaria-Fogo-Nobre-design-2024-04-4.jpg",
+      "rating": "2"
+    },
+    {
+      "id": 8,
+      "name": "Parque dos Ipês",
+      "category": "Parques",
+      "location": "Santa Bárbara D'Oeste",
+      "photoUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/60/11/6d/linda-paisagem.jpg?w=900&h=500&s=1",
+      "rating": "4"
+    },
+    {
+      "id": 9,
+      "name": "Parque Dom Pedro Shopping",
+      "category": "Shoppings",
+      "location": "Campinas",
+      "photoUrl": "https://www.hedgeinvest.com.br/wp-content/uploads/2023/01/Parque_D_Pedro_Shopping_Mauricio_Moreno-1-1024x683.jpg",
+      "rating": "4"
+    }
+  ]
+}
